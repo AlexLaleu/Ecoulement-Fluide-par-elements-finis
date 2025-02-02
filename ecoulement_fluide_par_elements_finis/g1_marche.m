@@ -1,12 +1,10 @@
-function g1=g1_marche(Refneu, Coorneu, i)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% fonction qui renvoie la valeur de g1 au point M_i du bord 
-% concerné par les conditions de Dirichlet
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    if Refneu(i)==1
-        g1=-4*(Coorneu(i,2)-1)*(Coorneu(i,2)-2);
+function g1_value = g1_marche(Refneu, Coorneu, i)
+
+    g1_value=0;
+    % Bord où les conditions de Dirichlet sont appliquées
+    % on enlève les points (0,1) et (0,2) ici
+    if Coorneu(i,1)==0 && 1<Coorneu(i,2)<2
+        g1_value=(2-Coorneu(i,2))*Coorneu(i,2);
     end
-    if Refneu(i)==2
-        g1=0;
-    end
+
 end
