@@ -15,7 +15,7 @@
 nom_maillage = 'geomRectangle_partie3_marche.msh';
 [Nbpt,Nbtri,Coorneu,Refneu,Numtri,~,~,~,~] = lecture_msh_ordre2(nom_maillage);
 
-nu =1;      % viscosite
+nu =1;      % viscosite, valeur pouvant etre modifiee
 
 % ----------------------
 % calcul des matrices EF
